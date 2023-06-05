@@ -1,8 +1,15 @@
 [package]
 name = "huntaway"
 version = "0.1.0"
+authors = ["fujia <fujia.site@gmail.com>"]
 edition = "2021"
 
+description = "An awesome CLI toolkits built with Rust."
+readme = "README.md"
+keywords = ["terminal-app", "deployment", "cli"]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+license = "MIT"
 
 [dependencies]
