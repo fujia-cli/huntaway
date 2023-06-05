@@ -8,6 +8,9 @@ description = "An awesome CLI toolkits built with Rust."
 readme = "README.md"
 keywords = ["terminal-app", "deployment", "cli"]
 
+homepage = "https://github.com/fujia-cli/huntaway"
+repository = "https://github.com/fujia-cli/huntaway"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 license = "MIT"
