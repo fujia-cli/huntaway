@@ -1,5 +1,8 @@
 use clap::{Parser, Subcommand};
-use huntaway::{commands::doctor, result::Result};
+use huntaway::{
+  commands::{clear, doctor, init, publish},
+  result::Result,
+};
 use std::process;
 
 #[derive(Debug, Parser)]
@@ -12,7 +15,10 @@ struct Cli {
 
 #[derive(Debug, Subcommand)]
 enum Cmds {
+  Clear(clear::Cmd),
   Doctor(doctor::Cmd),
+  Init(init::Cmd),
+  Publish(publish::Cmd),
 }
 
 #[tokio::main]
@@ -27,6 +33,9 @@ async fn main() {
 
 async fn run(cli: Cli) -> Result {
   match cli.cmd {
+    Cmds::Clear(cmd) => cmd.run().await,
     Cmds::Doctor(cmd) => cmd.run().await,
+    Cmds::Init(cmd) => cmd.run().await,
+    Cmds::Publish(cmd) => cmd.run().await,
   }
 }
